@@ -1,11 +1,10 @@
 import React from "react";
 import Icon from "../icons/icon";
-import { Link, useLocation } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 
 type Props = {};
 
 export default function NavBar({}: Props) {
-  const { pathname } = useLocation();
 
   /*   function navLinks() {
     if (pathname.includes("login") || pathname.includes("dash")) {

@@ -1,0 +1,1 @@
+export const baseUrl = "https://api.taskautomationpartners.com:7777/";
