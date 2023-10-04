@@ -66,15 +66,18 @@ export const meta: MetaFunction = () => {
 };
 
 export async function action({ request }: ActionFunctionArgs) {
-  console.log("request");
+  const entries = Object.fromEntries(await request.formData())
+  entries.id = crypto.randomUUID()
+  console.table(entries)
   const res = await fetch(baseUrl + "Inquiry", {
     method: "POST",
-    body: request.body,
+    body: JSON.stringify(entries),
     headers: {
       "Content-Type": "application/json",
     },
   });
   if (res.ok) 
+  console.table(res)
     return {
       success: true,
     };
