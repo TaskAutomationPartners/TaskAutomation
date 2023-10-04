@@ -1,6 +1,6 @@
 import type { ActionFunctionArgs, MetaFunction } from "@remix-run/node";
 import { useActionData } from "@remix-run/react";
-import { baseUrl } from "~/api/api";
+import { Agent } from "~/api/agent";
 import About from "~/components/sections/About";
 import Contact from "~/components/sections/Contact";
 import HeroSection from "~/components/sections/HeroSection";
@@ -69,17 +69,15 @@ export async function action({ request }: ActionFunctionArgs) {
   const entries = Object.fromEntries(await request.formData())
   entries.id = crypto.randomUUID()
   console.table(entries)
-  const res = await fetch(baseUrl + "Inquiry", {
-    method: "POST",
-    body: JSON.stringify(entries),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  if (res.ok) 
-  console.table(res)
+  const res = await Agent.Inquiry.submitInquiry(entries)
+  console.log(res)
+  if (res) {
     return {
       success: true,
+    } 
+  } else
+    return {
+      error: res,
     };
   }
 
