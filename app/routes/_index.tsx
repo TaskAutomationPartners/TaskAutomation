@@ -6,6 +6,7 @@ import Contact from "~/components/sections/Contact";
 import HeroSection from "~/components/sections/HeroSection";
 import Solutions from "~/components/sections/Solutions";
 import ToolSection from "~/components/sections/ToolSection";
+import crypto from "crypto";
 
 export const meta: MetaFunction = () => {
   return [
