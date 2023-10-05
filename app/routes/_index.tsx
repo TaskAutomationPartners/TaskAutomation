@@ -70,16 +70,18 @@ export async function action({ request }: ActionFunctionArgs) {
   const entries = Object.fromEntries(await request.formData())
   entries.id = crypto.randomUUID()
   console.table(entries)
-  const res = await Agent.Inquiry.submitInquiry(entries)
-  console.log(res)
-  if (res) {
+  return await Agent.Inquiry.submitInquiry(entries).then((res) => {
+    console.log(res);
     return {
       success: true,
-    } 
-  } else
-    return {
-      error: res,
     };
+  }).catch((err) => {
+    console.log(err);
+    return {
+      error: true,
+    };
+  }
+  );
   }
 
 export default function Index() {

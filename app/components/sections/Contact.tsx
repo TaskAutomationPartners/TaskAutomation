@@ -1,7 +1,6 @@
 import { Form } from "@remix-run/react";
 import React from "react";
 
-
 type Props = {
   title: string;
   contactDescription: string;
@@ -113,6 +112,12 @@ export default function Contact({
                 {actionData && actionData?.success && (
                   <div className="w-full p-4 my-4 border-slate-500 shadow-xl bg-green-600 text-slate-50 text-lg justify-center">
                     Thank you for your inquiry. We will be in touch soon.
+                  </div>
+                )}
+                {actionData && actionData?.error && (
+                  <div className="w-full p-4 my-4 border-slate-500 shadow-xl bg-red-600 text-slate-50 text-lg justify-center">
+                    There was an error submitting your inquiry. Please try again
+                    later.
                   </div>
                 )}
               </div>
