@@ -14,7 +14,7 @@ export default function About({}: Props) {
               About Us
             </h2>
             <p className="text-base-100">
-              At the intersection of innovation and excellence, we strive to
+              At the intersections of innovation and excellence, we strive to
               elevate digital experiences and transform the way businesses
               operate in the digital landscape. Driven by a passion for
               technology, we are dedicated to delivering solutions that foster
