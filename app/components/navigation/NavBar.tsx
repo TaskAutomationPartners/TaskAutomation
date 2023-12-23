@@ -53,13 +53,15 @@ export default function NavBar({}: Props) {
         <a href="/" className="btn btn-ghost normal-case text-xl">
           {" "}
           <Icon
-            icon="tapCyan"
-            width={60}
-            height={60}
-            color="cyan"
-            className="bg-cyan-300 rounded-xl"
+            icon="TapWhiteLogo"
+            width={40}
+            height={40}
           />
-          TaskAutomationPartners
+      <Icon
+            icon="TapLogoTextWhiteLargert"
+            width={120}
+            height={40}
+          />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">

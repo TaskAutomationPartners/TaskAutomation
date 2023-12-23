@@ -11,6 +11,12 @@ export default function Icon({ icon, ...props}: SVGProps<SVGSVGElement> & { icon
 }
 
 export const iconNames = [
+  "TapIcon",
+  "TapIcon2",
+  "TapLogoTextHerot",
+  "TapLogoTextReducedHeightWhite",
+  "TapLogoTextWhiteLargert",
+  "TapWhiteLogo",
   "chevron-down",
   "tapCyan",
   "undraw_data_processing_yrrv",
