@@ -7,6 +7,7 @@ import HeroSection from "~/components/sections/HeroSection";
 import Solutions from "~/components/sections/Solutions";
 import ToolSection from "~/components/sections/ToolSection";
 import crypto from "crypto";
+import ExampleBanner from "~/components/sections/ExampleBanner";
 
 export const meta: MetaFunction = () => {
   return [
@@ -92,6 +93,7 @@ export default function Index() {
       <About />
       <ToolSection />
       <Solutions />
+      <ExampleBanner />
       <Contact
         actionData={actionData}
         title="Get in touch."
